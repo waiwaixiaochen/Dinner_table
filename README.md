@@ -29,7 +29,12 @@ Run the program
 $ python dinner_party.py
 ```
 
-## Strategies used
+## Strategy used 
+
+Local search algorithm was used in this program. The people's seat were swapped with its left or opposite seat. Compare the scores after each swap and record the higher one.
+
+
+## Steps
 
 - Step 1: Set the initial seats to be seated according to the people's order, that is, 
           if the seat number is i, then the people is the ith people in the seat
