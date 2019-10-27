@@ -11,6 +11,7 @@ The "score" of a table is determined by the following criteria:
 - 2 points for every opposite pair (seated across from each other) of people with one a host and the other a guest.
 - h(p1, p2) + h(p2, p1) points for every adjacent or opposite pair of people p1, p2.
 
+As an event organizer is to write a search that will find a "good" table score for a given set of people and preference function.
 
 
 ## Pre-reqs, Setup, and Build
@@ -28,4 +29,13 @@ Run the program
 $ python dinner_party.py
 ```
 
+## Strategies used
+
+- Step 1: Set the initial seats to be seated according to the people's order, that is, 
+          if the seat number is i, then the people is the ith people in the seat
+- Step 2: Calculate the score for the table
+- Step 3: Swap the people for the first seat with its left seat, or with the opposite seat
+- Step 4: Repeat Step 2, compare the scores, keep the record of the seats state with the higher score. 
+          Repeat Step 3, move to the next seat
+- Step 5: Repeat Step 4, until time(60 seconds) is over, return the highest score along with the seats information
 
